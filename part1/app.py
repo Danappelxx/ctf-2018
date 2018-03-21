@@ -7,6 +7,7 @@ app = Flask(__name__)
 app.secret_key = "5029C3CE-04E5-42B1-AB81-30D2C121ABBC"
 
 db = DB()
+database_url = "http://localhost:8000"
 
 # statics
 @app.route("/css/<path:path>")
@@ -28,6 +29,9 @@ def landing():
 def dashboard():
     if "username" not in session:
         return redirect(url_for("login"))
+
+    if db.is_admin(session["username"]):
+        return render_template("dashboard.html", adminsection="<a href='{}'><h2>database</h2></a>".format(database_url))
 
     return render_template("dashboard.html")
 

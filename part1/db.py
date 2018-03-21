@@ -24,11 +24,10 @@ class DB(object):
 
     def is_admin(self, username):
         #check admin status
-
         if username not in self.js_obj['users']:
             return False
 
-        return True if self.js_obj['users'][username]['admin_status'] == "noadmin" else False
+        return True if self.js_obj['users'][username]['admin_status'] == "admin" else False
 
     def get_all_users(self):
         #return all users
