@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block title %}Dashboard{% endblock %}
+{% block styles %}
+	<link href="css/dashboard.css" rel="stylesheet">
+{% endblock %}
+{% block scripts %}
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/dashboard.js"/></script>
+{% endblock %}
+
+{% block body %}
+	<h1>The dashboard!</h1>
+
+	<div class="block-container">
+
+		<div class="block">
+			<date id="countdown"></date>
+		</div>
+
+		<div class="block">
+			<div id="calculator-container">
+				<input type="text" name="">
+				<div id="calculator">
+					<table>
+						<tr>
+							<td>
+								<button class="calc-button">1</button>
+							</td>
+							<td>
+								<button class="calc-button">2</button>
+							</td>
+							<td>
+								<button class="calc-button">3</button>
+							</td>
+							<td>
+								<button class="calc-button">+</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button class="calc-button">4</button>
+							</td>
+							<td>
+								<button class="calc-button">5</button>
+							</td>
+							<td>
+								<button class="calc-button">6</button>
+							</td>
+							<td>
+								<button class="calc-button">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button class="calc-button">7</button>
+							</td>
+							<td>
+								<button class="calc-button">8</button>
+							</td>
+							<td>
+								<button class="calc-button">9</button>
+							</td>
+							<td>
+								<button class="calc-button">*</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button class="calc-button">c</button>
+							</td>
+							<td>
+								<button class="calc-button">0</button>
+							</td>
+							<td>
+								<button class="calc-button">=</button>
+							</td>
+							<td>
+								<button class="calc-button">/</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="block">
+			<a href="https://www.losaltoshacks.com/dashboard/"><h2>real dashboard</h2></a>
+			<h2>if you're lost lol</h2>
+		</div>
+
+		<div class="block">
+			<a href="/logout"><h2>log out</h2></a>
+		</div>
+
+	</div>
+
+
+{% endblock %}
