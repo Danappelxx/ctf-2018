@@ -11,3 +11,6 @@ instance/
 ### ssh ###
 ctf_rsa
 ctf_rsa.pub
+
+### logging ###
+*.log

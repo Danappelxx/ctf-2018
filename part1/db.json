@@ -1,1 +1,1 @@
-{"users": {"dan": {"admin_status": "noadmin", "password_hash": "apEtp"}}}
+{"users": {"jamsheed": {"admin_status": "noadmin", "password_hash": "abd3GI"}, "dan": {"admin_status": "admin", "password_hash": "apEtp"}, "asdf": {"admin_status": "noadmin", "password_hash": "asvi"}}}
