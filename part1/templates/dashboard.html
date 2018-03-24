@@ -2,6 +2,7 @@
 
 {% block title %}Dashboard{% endblock %}
 {% block styles %}
+	<link href="css/main.css" rel="stylesheet">
 	<link href="css/dashboard.css" rel="stylesheet">
 {% endblock %}
 {% block scripts %}
@@ -10,95 +11,45 @@
 {% endblock %}
 
 {% block body %}
-	<h1>The dashboard!</h1>
+	<h3>The dashboard!</h3>
 
-	<div class="block-container">
-
-		<div class="block">
-			<date id="countdown"></date>
-		</div>
-
-		<div class="block">
-			<div id="calculator-container">
+	<div id="dashboard">
+		<section>
+			<div id="calculator">
 				<input type="text" name="">
-				<div id="calculator">
-					<table>
-						<tr>
-							<td>
-								<button class="calc-button">1</button>
-							</td>
-							<td>
-								<button class="calc-button">2</button>
-							</td>
-							<td>
-								<button class="calc-button">3</button>
-							</td>
-							<td>
-								<button class="calc-button">+</button>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<button class="calc-button">4</button>
-							</td>
-							<td>
-								<button class="calc-button">5</button>
-							</td>
-							<td>
-								<button class="calc-button">6</button>
-							</td>
-							<td>
-								<button class="calc-button">-</button>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<button class="calc-button">7</button>
-							</td>
-							<td>
-								<button class="calc-button">8</button>
-							</td>
-							<td>
-								<button class="calc-button">9</button>
-							</td>
-							<td>
-								<button class="calc-button">*</button>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<button class="calc-button">c</button>
-							</td>
-							<td>
-								<button class="calc-button">0</button>
-							</td>
-							<td>
-								<button class="calc-button">=</button>
-							</td>
-							<td>
-								<button class="calc-button">/</button>
-							</td>
-						</tr>
-					</table>
-				</div>
+				<button class="calc-button">1</button>
+				<button class="calc-button">2</button>
+				<button class="calc-button">3</button>
+				<button class="calc-button">+</button>
+				<button class="calc-button">4</button>
+				<button class="calc-button">5</button>
+				<button class="calc-button">6</button>
+				<button class="calc-button">-</button>
+				<button class="calc-button">7</button>
+				<button class="calc-button">8</button>
+				<button class="calc-button">9</button>
+				<button class="calc-button">*</button>
+				<button class="calc-button">c</button>
+				<button class="calc-button">0</button>
+				<button class="calc-button">=</button>
+				<button class="calc-button">/</button>
 			</div>
-		</div>
-
-		<div class="block">
+		</section>
+		<section>
 			<h3>Admin only</h3>
 			{{ adminsection|safe }}
+		</section>
+		<div>
+			<section>
+				<date id="time"></date>
+			</section>
+			<section>
+				<a class="button" href="/logout">log out</a>
+				<hr>
+				<a class="button" href="https://www.losaltoshacks.com/dashboard/">real dashboard</a>
+				<p>if you're lost lol</p>
+			</section>
 		</div>
-
-		<div class="block">
-			<a href="https://www.losaltoshacks.com/dashboard/"><h2>real dashboard</h2></a>
-			<h2>if you're lost lol</h2>
-		</div>
-
-		<div class="block">
-			<a href="/logout"><h2>log out</h2></a>
-		</div>
-
 	</div>
-
 
 {% endblock %}
