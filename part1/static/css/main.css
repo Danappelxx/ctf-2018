@@ -32,31 +32,18 @@ h1 {
 	letter-spacing: 0.025em;
 	white-space: nowrap;
 }
-header h2 {
-	font-size: 1.25em;
-	text-indent: 2px;
-	letter-spacing: 0.65em;
-	word-spacing: 0.3em;
-	text-transform: uppercase;
-}
 h3 {
 	font-size: 1.5rem;
 }
 
-header, section, form {
-	display: grid;
-	grid-auto-flow: column;
-	grid-gap: 0.5rem;
-	justify-content: start;
-}
-
-header {
-	grid-gap: 1rem;
-}
-#logo {
-	color: #000;
-	mix-blend-mode: screen;
-	max-width: calc(10rem + 2.5vw);
+hr {
+	border: 0;
+	clear: both;
+	display: block;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	height: 2px;
+	margin: 0.5rem auto;
 }
 
 input {
@@ -67,11 +54,13 @@ input {
 	padding: 0.5em 0.75em;
 	font: inherit;
 	outline: none;
+	max-width: 100%;
 }
 
 button,
 .button,
 input[type=submit] {
+	font: inherit;
 	background: linear-gradient(45deg, #71c2e5, #5bd2de, #a7d8f5) 0/200%;
 	border-radius: 0.25rem;
 	box-shadow: var(--shadow);
@@ -113,10 +102,34 @@ input[type=submit][disabled] {
 }
 
 
+header, form {
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 0.5rem;
+	justify-content: start;
+}
+
+header {
+	grid-gap: 1rem;
+	filter: drop-shadow(rgba(0, 0, 0, 0.1) 0 1px 1px);
+}
+header h2 {
+	font-size: 1.25em;
+	text-indent: 2px;
+	letter-spacing: 0.65em;
+	word-spacing: 0.28em;
+	text-transform: uppercase;
+}
+#logo {
+	color: #000;
+	mix-blend-mode: screen;
+	max-width: calc(10rem + 2.5vw);
+}
+
+
 main {
 	display: grid;
 	grid-gap: 1rem;
-	filter: drop-shadow(rgba(0, 0, 0, 0.1) 0 1px 1px);
 }
 
 main h2 {

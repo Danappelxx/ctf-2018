@@ -4,7 +4,7 @@ function showDate() {
 	}
 
 	var now = new Date();
-	document.getElementById("countdown").innerHTML = pad2(now.getHours()) + ":" + pad2(now.getMinutes()) + ":" + pad2(now.getSeconds());
+	document.getElementById("time").innerHTML = pad2(now.getHours()) + ":" + pad2(now.getMinutes()) + ":" + pad2(now.getSeconds());
 }
 showDate();
 setInterval(showDate, 1000);
@@ -47,4 +47,4 @@ function Calculator($container) {
 	}
 }
 
-var calculator = new Calculator($("#calculator-container"));
+var calculator = new Calculator($("#calculator"));
