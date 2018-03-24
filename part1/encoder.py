@@ -1,5 +1,5 @@
 #alphabet
-permissible = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+'
+permissible = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-|'
 
 #contain an index
 def contain(pos, shift, mx):
@@ -15,10 +15,8 @@ def encode(inp):
     sh = 0
     for ch in inp:
         pos = permissible.index(ch)
-        print pos
         c = contain(pos, sh, len(permissible))
         nC = permissible[c]
-        print nC
         sh = pos
         output += nC
     return output
