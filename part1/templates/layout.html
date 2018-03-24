@@ -2,10 +2,13 @@
 <html>
 <head>
 	<title>{% block title %}{% endblock %}</title>
+	
 	{% block styles %}{% endblock %}
 </head>
 <body>
-
+	<header>
+		<h1>Los Altos Hacks III CTF</h1>
+	</header>
 	{% with messages = get_flashed_messages() %}
 		{% if messages %}
 			{% for message in messages %}

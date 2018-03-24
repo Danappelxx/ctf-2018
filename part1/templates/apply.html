@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Apply to Los Altos Hacks!</title>
+{% extends "layout.html" %}
 
-	<link href="css/fonts.css" rel="stylesheet">
-	<link href="css/landing.css" rel="stylesheet">
+{% block title %}Log in{% endblock %}
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-</head>
-<body>
-	<main>
-		<!-- Top -->
-		<section id="top">
-			<div class="row" id="apply">
-				<h2 class="gradient-text">Apply Now!</h2>
-				<form action="/apply" method="POST">
-					<input type="text" name="username" placeholder="Username">
-					<input type="password" name="password" placeholder="Insecure Password">
-					<input type="submit" value="Submit"></input>
-				</form>
-			</div>
-		</section>
-	</main>
-</body>
-</html>
+{% block styles %}
+	<link href="css/main.css" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+	<h2>Apply Now!</h2>
+	<form action="/apply" method="POST">
+		<input type="text" name="username" placeholder="Username">
+		<input type="password" name="password" placeholder="Insecure Password">
+		<input type="submit" value="Submit"></input>
+	</form>
+{% endblock %}
