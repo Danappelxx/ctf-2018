@@ -110,14 +110,19 @@ header, form {
 }
 
 header {
+	grid-template-columns: minmax(100px, auto) 1fr;
 	grid-gap: 1rem;
+	font-size: calc(1.5rem + 1.5vw);
 	filter: drop-shadow(rgba(0, 0, 0, 0.1) 0 1px 1px);
+	align-items: center;
+	white-space: nowrap;
 }
 header h2 {
-	font-size: 1.25em;
+	font-size: 0.5em;
 	text-indent: 2px;
-	letter-spacing: 0.65em;
+	letter-spacing: 0.69em;
 	word-spacing: 0.28em;
+	margin-bottom: 0.5em;
 	text-transform: uppercase;
 }
 #logo {
