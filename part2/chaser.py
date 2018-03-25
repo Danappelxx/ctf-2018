@@ -3,6 +3,7 @@ import re
 jam_initial_pos = (2,3)
 you_initial_pos = (10,20)
 exit_pos = (24,15)
+jam_path = [(2,4),(3,4),(4,4),(5,4),(6,4),(7,4),(7,5),(7,6),(8,6),(8,7),(9,7),(10,7),(10,8),(11,8),(12,8),(12,9),(13,9),(13,10),(14,10),(14,11),(15,11),(15,12),(15,13),(15,14),(15,15),(16,15),(17,15),(18,15),(19,15),(20,15),(21,15),(22,15),(23,15),(24,15)]
 
 def gen_path(point_from, point_to):
     steps = []
@@ -59,8 +60,8 @@ def is_valid(path):
 
     return True
 
-def check(input):
-    # TODO
+def check(path):
+    return check_correct(jam_path, path)
 
 def check_correct(j_path, y_path):
     # first make sure that the path is legal
