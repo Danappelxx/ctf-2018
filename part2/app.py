@@ -49,7 +49,7 @@ def login():
 def logout():
     session.pop("username", None)
     flash("Successfully logged out")
-    return redirect(url_for("dashboard"))
+    return redirect(url_for("database"))
 
 @app.route("/winner")
 def winner():
