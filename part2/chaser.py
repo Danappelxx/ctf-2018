@@ -1,3 +1,5 @@
+import re
+
 jam_initial_pos = (2,3)
 you_initial_pos = (10,20)
 exit_pos = (24,15)
@@ -57,6 +59,9 @@ def is_valid(path):
 
     return True
 
+def check(input):
+    # TODO
+
 def check_correct(j_path, y_path):
     # first make sure that the path is legal
     if not is_valid(y_path):
@@ -67,5 +72,7 @@ def check_correct(j_path, y_path):
     return j_path[num_steps - 1] == y_path[-1]
 
 def parse(input):
-    # TODO: implement
-    return []
+    numbers = map(int, re.sub(r"[^0-9]+", " ", input).split())
+    if not len(numbers) % 2 == 0:
+        return False
+    return [tuple(numbers[i:i+2]) for i in xrange(0, len(numbers), 2)]
