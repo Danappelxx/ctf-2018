@@ -230,3 +230,8 @@ main a:hover img {
 	padding: 0.5em 0.75em;
 	max-width: max-content;
 }
+
+.ascii-format {
+	font-size: 0.5em;
+	font-family: "Courier New", "Courier", monospace;
+}

@@ -69,7 +69,13 @@ def database():
     if request.method == "GET":
         return render_template("database.html")
 
-    if "answer" in request.form and request.form["answer"] == answer:
+    if "answer" not in request.form:
+        return render_template("database.html")
+
+    answer_path = chaser.parse(request.form["answer"])
+    is_winner = chaser.check(answer_path)
+
+    if is_winner:
         session["winner"] = "yep"
         return redirect(url_for("winner"))
     else:
