@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	
+	{% block styles %}{% endblock %}
+</head>
+<body>
+	<header>
+		<svg id="#logo" width="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 553.3 343.4"><path d="M.005 228.946h251.9v114.5h-137.4z" fill="#72c2e5"/><path d="M.005.046v229l114.5 114.5V.146z" fill="#b9dbef"/><path d="M324.425.046l114.5 343.4h114.5L438.925.046z" fill="#72c2e5"/><path d="M209.925 343.446l114.5-343.4h114.5l-114.5 343.4z" fill="#b9dbef"/></svg>
+		<div>
+			<h1>Los Altos Hacks III</h1>
+			<h2>Capture the Flag</h2>
+		</div>
+	</header>
+	<main>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<div class="alert"><strong>{{ message }}</strong></div>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+
+		{% block body %}{% endblock %}
+	</main>
+
+	{% block scripts %}{% endblock %}
+</body>
+</html>
