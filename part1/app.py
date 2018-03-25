@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, redirect, session, flash, url_for, send_from_directory
 from db import DB
-from encoder import encode
+from secrets import encoder
 import subprocess
 
 app = Flask(__name__)
@@ -45,7 +45,7 @@ def apply():
 
         username = request.form["username"]
         password = request.form["password"]
-        password_hash = encode(password)
+        password_hash = encoder.encode(password)
         if not db.create_user(username, password_hash):
             flash("User with same name already exists")
         return redirect(url_for("login"))
@@ -60,7 +60,7 @@ def login():
     elif request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
-        password_hash = encode(password)
+        password_hash = encoder.encode(password)
 
         user = db.get_user(username)
         if user is not None and user["password_hash"] == password_hash:

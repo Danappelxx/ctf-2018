@@ -2,7 +2,7 @@ import json
 
 class DB(object):
     #initialize with a database filename
-    def __init__(self, fname = "db.json"):
+    def __init__(self, fname = "secrets/db.json"):
         self.fname = fname
         self.js_obj = json.load(open(self.fname, 'r'))
 
