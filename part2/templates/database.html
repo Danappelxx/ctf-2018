@@ -1,24 +1,28 @@
 {% extends "layout.html" %}
 
-{% block title %}Log in{% endblock %}
+{% block styles %}
+	<link href="css/main.css" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Database{% endblock %}
 
 {% block body %}
-	<hr>
+	<section class="card">
 		<h4>Dear reader,</h4>
 			<p>Bet you thought this would be a database! Jokes on you!</p>
 			<p>In reality, I have been framed. The real villain here is <strong>Jamsheed Mistrivich</strong>.</p>
 			<p>That's right. The famed hackathon organizer has actually stolen everyone's social security numbers! You should unfriend him on facebook.</p>
 			<p>However, for reasons I cannot disclose here, I must take the fall for this mess. I won't go down without a fight, though!</p>
 		<h4>Signed, Kyle Sandellovich</h4>
-	<hr>
+	</section>
 
-		<p>I need you to prove that you can beat Mistrivich if it comes down to it. Get past this challenge. It requires real smarts. Make sure to do it in a hipster language, too, for extra cool points.</p>
+	<br>
 
-	<hr>
-		<h4>If you think you got the answer, submit it in the form below.</h4>
-		<form method="POST">
-			<input type="text" name="answer" placeholder="Answer"/>
-			<input type="submit" value="Submit"/>
-		</form>
-	<hr>
+	<p>I need you to prove that you can beat Mistrivich if it comes down to it. Get past this challenge. It requires real smarts. Make sure to do it in a hipster language, too, for extra cool points.</p>
+
+	<h4>If you think you got the answer, submit it in the form below.</h4>
+	<form method="POST">
+		<input type="text" name="answer" placeholder="Answer"/>
+		<input type="submit" value="Submit"/>
+	</form>
 {% endblock %}

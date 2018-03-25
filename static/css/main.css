@@ -56,6 +56,9 @@ input {
 	outline: none;
 	max-width: 100%;
 }
+input[type=text], input[type=password] {
+	min-width: 300px;
+}
 
 button,
 .button,
@@ -167,4 +170,39 @@ main img {
 main a:hover img {
 	transform: translateY(-2px) scale(1.01);
 	filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.15));
+}
+
+
+
+
+
+.card-columns {
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	align-items: start;
+	grid-auto-columns: minmax(max-content, 1fr);
+}
+
+.card, .card-columns > div {
+	display: grid;
+	grid-gap: 0.75rem;
+}
+.card {
+	color: rgba(0, 25, 53, 0.9);
+	border-radius: 0.25rem;
+	grid-auto-rows: auto;
+	align-content: start;
+	padding: 1.5rem;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.alert {
+	background-color: rgba(255, 155, 47, 0.8);
+	border-radius: 0.25em;
+	padding: 0.5em 0.75em;
+	max-width: max-content;
 }

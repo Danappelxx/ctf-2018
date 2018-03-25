@@ -13,13 +13,13 @@ database_url = "http://losaltoshacks3.westus2.cloudapp.azure.com:8000/"
 @app.route("/css/<path:path>")
 def css(path):
     print(path)
-    return send_from_directory("static/css", path)
+    return send_from_directory("../static/css", path)
 @app.route("/js/<path:path>")
 def js(path):
-    return send_from_directory("static/js", path)
+    return send_from_directory("../static/js", path)
 @app.route("/fonts/<path:path>")
 def fonts(path):
-    return send_from_directory("static/fonts", path)
+    return send_from_directory("../static/fonts", path)
 
 @app.route("/")
 def landing():

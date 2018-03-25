@@ -1,4 +1,5 @@
-from flask import Flask, request, make_response, render_template, session, url_for, redirect, flash
+from flask import Flask, request, make_response, render_template, session, url_for, redirect, flash, send_from_directory
+
 import uuid
 
 app = Flask(__name__)
@@ -7,6 +8,18 @@ app.secret_key = "5d477e99-df8b-4961-b73a-c82fa8e167b1"
 username = str(uuid.uuid4())
 password = str(uuid.uuid4())
 answer = "something!"
+
+# statics
+@app.route("/css/<path:path>")
+def css(path):
+    print(path)
+    return send_from_directory("../static/css", path)
+@app.route("/js/<path:path>")
+def js(path):
+    return send_from_directory("../static/js", path)
+@app.route("/fonts/<path:path>")
+def fonts(path):
+    return send_from_directory("../static/fonts", path)
 
 @app.route("/login", methods=["get", "post"])
 def login():

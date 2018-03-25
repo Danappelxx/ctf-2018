@@ -13,8 +13,8 @@
 {% block body %}
 	<h3>The dashboard!</h3>
 
-	<div id="dashboard">
-		<section>
+	<div class="card-columns">
+		<section class="card">
 			<div id="calculator">
 				<input type="text" name="">
 				<button class="calc-button">1</button>
@@ -35,15 +35,15 @@
 				<button class="calc-button">/</button>
 			</div>
 		</section>
-		<section>
+		<section class="card">
 			<h3>Admin only</h3>
 			{{ adminsection|safe }}
 		</section>
 		<div>
-			<section>
+			<section class="card">
 				<date id="time"></date>
 			</section>
-			<section>
+			<section class="card">
 				<a class="button" href="/logout">log out</a>
 				<hr>
 				<a class="button" href="https://www.losaltoshacks.com/dashboard/">real dashboard</a>

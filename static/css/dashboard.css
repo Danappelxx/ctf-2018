@@ -1,0 +1,18 @@
+date {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+#calculator {
+	display: grid;
+	grid-gap: 0.25rem;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#calculator input {
+	grid-column: 1 / -1;
+	margin-bottom: 0.25rem;
+}
+#calculator button {
+	width: 100%;
+}
