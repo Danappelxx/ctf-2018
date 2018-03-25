@@ -82,7 +82,7 @@ def calculate():
     script = "exec(\"{}\")".format(expression)
     print(script)
     try:
-        output = subprocess.check_output(["python2.7", "-c", script], stderr=subprocess.STDOUT)
+        output = subprocess.check_output(["sudo", "-u", "secrets", "python2.7", "-c", script], stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as error:
         # this is the error output of the script.
         # if we want to be nice, we could do
