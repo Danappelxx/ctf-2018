@@ -50,7 +50,7 @@ def apply():
             flash("User with same name already exists")
         return redirect(url_for("login"))
 
-@app.route("/login1", methods=["get", "post"])
+@app.route("/login", methods=["get", "post"])
 def login():
     if "username" in session:
         return redirect(url_for("dashboard"))
@@ -70,7 +70,7 @@ def login():
             flash("Invalid credentials")
             return render_template("login.html")
 
-@app.route("/logout1")
+@app.route("/logout")
 def logout():
     session.pop("username", None)
     flash("Successfully logged out")
