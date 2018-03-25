@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>You won!</title>
-</head>
-<body>
-	<h1>You won!!!</h1>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block styles %}
+	<link href="css/main.css" rel="stylesheet">
+{% endblock %}
+
+{% block title %}You Won!!!{% endblock %}
+
+{% block body %}
+	<h1>You Won!!!</h1>
+{% endblock %}
