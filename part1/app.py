@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = "5029C3CE-04E5-42B1-AB81-30D2C121ABBC"
 
 db = DB()
-database_url = "http://losaltoshacks3.westus2.cloudapp.azure.com:8000/database"
+database_url = "/database"
 
 # statics
 @app.route("/css/<path:path>")
