@@ -21,7 +21,7 @@ def js(path):
 def fonts(path):
     return send_from_directory("../static/fonts", path)
 
-@app.route("/login", methods=["get", "post"])
+@app.route("/login2", methods=["get", "post"])
 def login():
     def login_page():
         response = make_response(render_template("login.html"))
@@ -45,7 +45,7 @@ def login():
             flash("NOPE!!!")
             return login_page()
 
-@app.route("/logout")
+@app.route("/logout2")
 def logout():
     session.pop("username", None)
     flash("Successfully logged out")
