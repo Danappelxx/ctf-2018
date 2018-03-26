@@ -1,5 +1,5 @@
 from flask import Flask, request, make_response, render_template, session, url_for, redirect, flash, send_from_directory
-
+import chaser
 import uuid
 
 app = Flask(__name__)
@@ -72,8 +72,8 @@ def database():
     if "answer" not in request.form:
         return render_template("database.html")
 
-    answer_path = chaser.parse(request.form["answer"])
-    is_winner = chaser.check(answer_path)
+    answer = request.form["answer"]
+    is_winner = answer == "243-44-4546"
 
     if is_winner:
         session["winner"] = "yep"

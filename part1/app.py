@@ -2,6 +2,7 @@ from flask import Flask, request, render_template, redirect, session, flash, url
 from db import DB
 from secrets import encoder
 import subprocess
+import os
 
 app = Flask(__name__)
 app.secret_key = "5029C3CE-04E5-42B1-AB81-30D2C121ABBC"
@@ -82,6 +83,7 @@ def calculate():
     script = "exec(\"{}\")".format(expression)
     print(script)
     try:
+        os.chdir("/home/lah/ctf/part1/secrets")
         output = subprocess.check_output(["sudo", "-u", "secrets", "python2.7", "-c", script], stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as error:
         # this is the error output of the script.
@@ -90,6 +92,8 @@ def calculate():
         # but that would make it too easy
         print(error.output.decode())
         output = "error"
+    finally:
+        os.chdir("/home/lah/ctf/part1")
     return output
 
 if __name__ == "__main__":
